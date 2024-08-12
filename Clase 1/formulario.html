@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="theme-stylesheet" rel="stylesheet" href="estiloClaro.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="container">
+    <h2>Formulario de Datos Personales</h2>
+    <form>
+        <label for="nombre">Nombre: 
+        <input name="nombre" type="text" required>
+        </label>
+        <label for="apellido">Apellido: 
+        <input name="apellido" type="text" required>
+        </label>
+        <label for="email">Email: 
+        <input name="email" type="email" required>
+        </label>
+        <label for="nacimiento">Fecha de nacimiento: 
+        <input name="nacimiento" type="date" required>
+        </label>
+        <label for="pais">Pais: 
+        <input name="pais" type="text" required>
+        </label>
+        <button class="btn-submit" type="submit">Enviar</button>
+    </form>
+    <hr>
+    <div class="buttons">
+    <button class="mode" onclick="setLightMode()">Modo claro</button>
+    <button class="mode" onclick="setDarkMode()">Modo oscuro</button>
+
+    <script>
+        function setLightMode() {
+            document.getElementById('theme-stylesheet').setAttribute('href', 'estiloClaro.css');
+        }
+
+        function setDarkMode() {
+            document.getElementById('theme-stylesheet').setAttribute('href', 'estiloOscuro.css');
+        }
+    </script>
+
+    </div>
+</div>
+</body>
+</html>
