@@ -56,6 +56,11 @@ label input:focus {
     box-shadow: 0 0 5px #eb50ff4f;
 }
 
+.error-message {
+    color: red;
+    display: none;
+}
+
 .btn-submit {
     background-color: #7f7fc7;
     color: white;

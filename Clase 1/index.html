@@ -9,21 +9,25 @@
 <body>
     <div class="container">
     <h2>Formulario de Datos Personales</h2>
-    <form>
+    <form id="myForm">
         <label for="nombre">Nombre: 
-        <input name="nombre" type="text" required>
+        <input id="nombre" name="nombre" type="text" required>
+        <span id="error-nombre" class="error-message">❌ No se permiten números ni espacios en blanco.</span>
         </label>
         <label for="apellido">Apellido: 
-        <input name="apellido" type="text" required>
+        <input id="apellido" name="apellido" type="text" required>
+        <span id="error-apellido" class="error-message">❌ No se permiten números ni espacios en blanco.</span>
         </label>
         <label for="email">Email: 
-        <input name="email" type="email" required>
+        <input id="email" name="email" type="email" required>
+        <span id="error-email" class="error-message">❌ El email no es válido.</span>
         </label>
         <label for="nacimiento">Fecha de nacimiento: 
         <input name="nacimiento" type="date" required>
         </label>
         <label for="pais">Pais: 
-        <input name="pais" type="text" required>
+        <input id="pais" name="pais" type="text" required>
+        <span id="error-pais" class="error-message">❌ No se permiten números ni espacios en blanco.</span>
         </label>
         <button class="btn-submit" type="submit">Enviar</button>
     </form>
@@ -32,15 +36,7 @@
     <button class="mode" onclick="setLightMode()">Modo claro</button>
     <button class="mode" onclick="setDarkMode()">Modo oscuro</button>
 
-    <script>
-        function setLightMode() {
-            document.getElementById('theme-stylesheet').setAttribute('href', 'estiloClaro.css');
-        }
-
-        function setDarkMode() {
-            document.getElementById('theme-stylesheet').setAttribute('href', 'estiloOscuro.css');
-        }
-    </script>
+    <script src="script.js"></script>
 
     </div>
 </div>
